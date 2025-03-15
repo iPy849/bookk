@@ -1,4 +1,4 @@
-package repositories
+package bookk
 
 type BaseItem struct {
 	Id          string

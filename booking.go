@@ -1,7 +1,6 @@
-package repositories
+package bookk
 
 import (
-	"github.com/iPy849/bookk/types"
 	"time"
 )
 
@@ -24,8 +23,8 @@ type IBookingService[T any] interface {
 	GetBookingById(bookingId string) (*T, error)
 	GetLastBookingsByUserId(userId string, limit int) ([]*T, error)
 	GetLastBookingsByGroupId(groupId string, limit int) ([]*T, error)
-	GetBookingsByTimeRangeAndUserId(userId string, timeRange types.TimeRange) ([]*T, error)
-	GetBookingsByTimeRangeAndGroupId(groupId string, timeRange types.TimeRange) ([]*T, error)
+	GetBookingsByTimeRangeAndUserId(userId string, timeRange TimeRange) ([]*T, error)
+	GetBookingsByTimeRangeAndGroupId(groupId string, timeRange TimeRange) ([]*T, error)
 	GetBookingsByDateAndUserId(userId string, date time.Time) ([]*T, error)
 	GetBookingsByDateAndGroupId(groupId string, date time.Time) ([]*T, error)
 	CreateBooking(booking Booking) (*Booking, error)
