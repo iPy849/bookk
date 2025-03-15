@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"bookk/types"
+	"github.com/iPy849/bookk/types"
 	"time"
 )
 
